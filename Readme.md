@@ -16,8 +16,8 @@ This project is an Azure Function written in Python that processes messages from
 ## Prerequisites
 
 - Azure CLI
-- Python 3.8+
-- MySQL Server
+- Python 3.10+
+- MySQL DB
 - Azure Storage Account
 - Azure Form Recognizer resource
 
