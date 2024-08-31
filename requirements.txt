@@ -1,0 +1,11 @@
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+mysql==0.0.3
+mysql-connector-python==8.3.0
+mysqlclient==2.2.4
+SQLAlchemy
+azure-ai-formrecognizer 
+azure-core

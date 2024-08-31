@@ -1,0 +1,7 @@
+import os
+
+class Constants:
+    AZURE_FORM_RECOGNIZER_ENDPOINT =  os.environ.get("AZURE_FORM_RECOGNIZER_ENDPOINT")
+    AZURE_FORM_RECOGNIZER_KEY = os.environ.get("AZURE_FORM_RECOGNIZER_KEY")
+    AZURE_FORM_RECOGNIZER_MODEL_ID = os.environ.get("AZURE_FORM_RECOGNIZER_MODEL_ID")
+    DB_ENGINE = os.environ.get("DB_ENGINE")
