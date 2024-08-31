@@ -56,7 +56,7 @@ This project is an Azure Function written in Python that processes messages from
         "AZURE_FORM_RECOGNIZER_KEY": "<AI Key>",
         "AZURE_FORM_RECOGNIZER_MODEL_ID": "<AI Model>",
         "DB_ENGINE":"<Mysql Connection String>"
-    }
+        }
     }
     ```
 4. **Starts Function**
