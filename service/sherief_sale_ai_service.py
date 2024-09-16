@@ -89,7 +89,7 @@ class AzureCustomModel:
                     property.parcel_tax_id = item.value.get("ParcelTaxId").value[:254] if item.value.get("ParcelTaxId") and item.value.get("ParcelTaxId").value else ""
                     property.comments = item.value.get("Comments").value[:254] if item.value.get("Comments") and item.value.get("Comments").value else ""
                     property.SHERIEF_SALE_CHILD_ID = sheriff_sale_detail_model.sheriff_sale_child_id
-                    if property.tracts == "1":
+                    if property.tracts == "1" and property.property_address is not "":
                         address = property.property_address.replace(" ", "-")
                         zillow_link = f"https://www.zillow.com/homes/{address}_rb/"
                         property.zillow_link = zillow_link
