@@ -1,7 +1,6 @@
 
 import logging
 import time
-import random
 
 from model.constants import Constants
 from model.db.sherif_sale_properties_alchemy import Property, PropertySherifSale
@@ -9,6 +8,7 @@ from model.json.sheriff_sale_detail_model import SheriffSaleDetailModel
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.polling import LROPoller
 from azure.core.credentials import AzureKeyCredential
+import secrets
 
 endpoint = Constants.AZURE_FORM_RECOGNIZER_ENDPOINT
 key = Constants.AZURE_FORM_RECOGNIZER_KEY
@@ -101,7 +101,7 @@ class AzureCustomModel:
 
             except Exception as e:
                 if '429' in str(e):  
-                    wait_time = delay * (2 ** attempt) + random.uniform(0, 1)
+                    wait_time = delay * (2 ** attempt) + secrets.SystemRandom().uniform(0, 1)
                     logging.error(f"Rate limit hit. Retrying in {wait_time:.2f} seconds...")
                     time.sleep(wait_time)
                 else:
